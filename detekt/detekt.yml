@@ -1,0 +1,20 @@
+complexity:
+  LongParameterList:
+    active: false
+  TooManyFunctions:
+    active: false
+
+naming:
+  FunctionNaming:
+    ignoreAnnotated:
+      - 'Composable'
+  # TODO Remove this when detekt 2.0.0 is released
+  # Waiting for multiplatformFileSuffixes
+  MatchingDeclarationName:
+    active: false
+
+style:
+  MagicNumber:
+    active: false
+  ReturnCount:
+    active: false

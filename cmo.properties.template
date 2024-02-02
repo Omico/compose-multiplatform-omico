@@ -1,0 +1,7 @@
+# Rename this file to "cmo.properties" to take effect
+
+# Switch Compose BOM version to let Gradle sync with the new version
+jetpack.compose.bom.version=2024.02.00
+
+# Used to synchronize code
+jetpack.repository.path=

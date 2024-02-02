@@ -1,0 +1,61 @@
+versions:
+  consensus: "0.9.0"
+  gradle: "8.6"
+  jsoup: "1.17.2"
+  kotlin: "1.9.22"
+  kotlinx:
+    serialization: "1.6.2"
+  maven: "4.0.0-alpha-12"
+  plugins:
+    android: "8.2.2"
+    gradle.enterprise: "3.16.2"
+    spotless: "6.25.0"
+
+repositories:
+  mavenLocal:
+  omico:
+  google:
+  mavenCentral:
+  gradlePluginPortal:
+
+plugins:
+  google:
+    com.android.library: ${versions.plugins.android}
+  gradlePluginPortal:
+    com.diffplug.spotless: ${versions.plugins.spotless}
+    com.gradle.enterprise: ${versions.plugins.gradle.enterprise}
+    org.jetbrains.kotlin.jvm: ${versions.kotlin}
+  omico:
+    me.omico.consensus.api: ${versions.consensus}
+    me.omico.consensus.git: ${versions.consensus}
+    me.omico.consensus.publishing: ${versions.consensus}
+    me.omico.consensus.spotless: ${versions.consensus}
+
+dependencies:
+  google:
+    com.android.tools.build:
+      gradle:
+        alias: androidGradlePlugin
+        version: ${versions.plugins.android}
+  mavenCentral:
+    org.apache.maven:
+      maven-core:
+        alias: maven.core
+        version: ${versions.maven}
+    org.jetbrains.kotlin:
+      kotlin-gradle-plugin:
+        alias: kotlinGradlePlugin
+        version: ${versions.kotlin}
+    org.jetbrains.kotlinx:
+      kotlinx-serialization-properties:
+        alias: kotlinx.serialization.properties
+        version: ${versions.kotlinx.serialization}
+    org.jsoup:
+      jsoup:
+        alias: jsoup
+        version: ${versions.jsoup}
+  omico:
+    me.omico.consensus:
+      consensus-dsl:
+        alias: me.omico.consensus.dsl
+        version: ${versions.consensus}
